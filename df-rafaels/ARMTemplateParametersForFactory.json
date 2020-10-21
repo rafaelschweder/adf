@@ -8,10 +8,13 @@
 		"AzureBlobStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"value": ""
+		},
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
-		"AzureSqlDatabaseLinkedService_connectionString": {
+		"LS_AzureSQL_AdventureWorksLT_connectionString": {
 			"value": ""
 		}
 	}

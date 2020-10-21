@@ -11,13 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageLinkedService'"
 		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
+		},
 		"AzureStorageLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
-		"AzureSqlDatabaseLinkedService_connectionString": {
+		"LS_AzureSQL_AdventureWorksLT_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
+			"metadata": "Secure string for 'connectionString' of 'LS_AzureSQL_AdventureWorksLT'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -49,11 +53,14 @@
 					"AzureBlobStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureBlobStorageLinkedService_connectionString')]"
 					},
+					"AzureSqlDatabaseLinkedService_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					},
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
 					},
-					"AzureSqlDatabaseLinkedService_connectionString": {
-						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					"LS_AzureSQL_AdventureWorksLT_connectionString": {
+						"value": "[parameters('LS_AzureSQL_AdventureWorksLT_connectionString')]"
 					}
 				}
 			},
