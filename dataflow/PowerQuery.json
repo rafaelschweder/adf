@@ -13,8 +13,17 @@
 					}
 				}
 			],
-			"sinks": [],
-			"script": "section Section1;\r\nshared VendasOnline = let\r\n  AdfDoc = Web.Contents(\"https://rafaelschweder.blob.core.windows.net/datafactory/ExtracaoVendasOnline.csv?sv=2018-03-28&sig=1r%2FeBRKITcMs%2F5pa9oIaWIM6fOqHZN4%2FcKNqaupuQ9w%3D&spr=https&se=2020-10-23T00%3A19%3A16Z&srt=sco&ss=bf&sp=rwl\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv])\r\nin\r\n  Csv;\r\nshared UserQuery = let\r\n  Source = VendasOnline\r\nin\r\n  Source;\r\n"
+			"sinks": [
+				{
+					"name": "Sink1",
+					"dataset": {
+						"referenceName": "DimCustomer_OLAP",
+						"type": "DatasetReference"
+					},
+					"script": "sink(input(\n\t\tCustomerID as integer,\n\t\tTitle as string,\n\t\tFirstName as string,\n\t\tMiddleName as string,\n\t\tLastName as string,\n\t\tSuffix as string,\n\t\tCompanyName as string,\n\t\tSalesPerson as string,\n\t\tEmailAddress as string,\n\t\tPhone as string,\n\t\tInsertedDate as timestamp,\n\t\tUpdatedDate as timestamp,\n\t\tHashKey as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Sink1"
+				}
+			],
+			"script": "section Section1;\r\nshared VendasOnline = let\r\n  AdfDoc = Web.Contents(\"https://rafaelschweder.blob.core.windows.net/datafactory/ExtracaoVendasOnline.csv?sv=2018-03-28&sig=JQm2VVEwH5twWpGKLxK3UI03kHoPpYMjY27QSjAowYg%3D&spr=https&se=2020-10-23T00%3A45%3A20Z&srt=sco&ss=bf&sp=rwl\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv])\r\nin\r\n  Csv;\r\nshared UserQuery = let\r\n  Source = VendasOnline\r\nin\r\n  Source;\r\n"
 		}
 	}
 }
