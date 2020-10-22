@@ -17,6 +17,12 @@
 		"LS_AzureSQL_AdventureWorksLT_connectionString": {
 			"value": ""
 		},
+		"LS_BlobStorage_connectionString": {
+			"value": ""
+		},
+		"LS_Databricks_accessToken": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
