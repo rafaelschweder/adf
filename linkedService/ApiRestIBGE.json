@@ -1,0 +1,12 @@
+{
+	"name": "ApiRestIBGE",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://servicodados.ibge.gov.br/api/v1/localidades/distritos?orderBy=nome",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
