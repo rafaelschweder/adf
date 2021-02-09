@@ -1,0 +1,71 @@
+{
+	"name": "DatasetSqlIBGE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlIBGE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ano",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "trimestre",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "uf",
+				"type": "char"
+			},
+			{
+				"name": "sexo",
+				"type": "varchar"
+			},
+			{
+				"name": "idade",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "cor",
+				"type": "varchar"
+			},
+			{
+				"name": "graduacao",
+				"type": "varchar"
+			},
+			{
+				"name": "trab",
+				"type": "varchar"
+			},
+			{
+				"name": "ocup",
+				"type": "varchar"
+			},
+			{
+				"name": "renda",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "horastrab",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "anosesco",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "IBGE",
+			"table": "Mongo"
+		}
+	}
+}
